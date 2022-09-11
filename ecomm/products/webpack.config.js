@@ -11,7 +11,13 @@ module.exports = {
             name: 'products',
             filename: 'remoteEntry.js',
             exposes: {
-                './ProductsIndex': './src/index'
+
+                // this is the way we'll export the whole file
+                // './ProductsIndex': './src/index'
+
+                // this is the way we'll export the whole file but here we have the mount function
+                './ProductsIndex': './src/bootstrap'
+
             },
             shared: {
                 faker: {
